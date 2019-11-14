@@ -56,7 +56,23 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 <img src="imgs/general-page/app-info.jpg" alt="消息页面" style="zoom:25%;" />
 
+在一个应用中，界面的构成基本由多个部分组成。如上图所示，将消息界面分为由边框组成的几个主要部分，详情如下：
 
+1. 应用级导航栏：该导航栏属于应用级导航，固定在应用底端，对应用提供的功能做最大类别的区分。在应用中，数据基本不会变化。
+2. 消息视图：导航内容，该内容显示在界面中，但内容独立维护，可以在其他场景独立显示（以下简称视图）。
+3. 视图操作区：该区域属于消息视图，用户定义消息视图的操作节点，不包括数据操作。
+4. 视图搜索区：该区域属于消息视图，搜索消息数据。
+5. 视图数据内容区：该区域属于消息视图，消息数据展示。
+
+该界面结构的划分，是基于界面内容和界面功能的特性，将其模型化后，详情如下：
+
+| 序号 | 名称           | 模型名称               | 详情                                                         | 备注             |
+| ---- | -------------- | ---------------------- | ------------------------------------------------------------ | ---------------- |
+| 1    | 应用级导航栏   | 应用菜单               | [ IPSAppMenu](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/menu/IPSAppMenu) |                  |
+| 2    | 消息视图       | 应用视图               | [ IPSAppView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppView) |                  |
+| 3    | 视图操作区     | 实体工具栏控件         | [ IPSDEToolbar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/toolbar/IPSDEToolbar) |                  |
+| 4    | 视图搜索区     | 快捷搜索               |                                                              | 应用视图内部模型 |
+| 5    | 视图数据内容区 | 实体移动端多项数据控件 | [ IPSDEMobMDCtrl](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/list/IPSDEMobMDCtrl) |                  |
 
 
 
