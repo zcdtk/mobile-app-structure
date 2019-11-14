@@ -58,6 +58,8 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 ##### 消息
 
+消息视图，是 app 中常见的视图信息展示方式。纵向的列表数据，具备删除功能，视图允许过滤数据，并有合适操作区域等。
+
 <img src="imgs/general-page/app-info.jpg" alt="消息页面" style="zoom:25%;" />
 
 如上图所示，将消息界面分为由边框组成的几个主要部分，详情如下：
@@ -83,6 +85,8 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 
 ##### 日历
+
+日历视图，作为时间的管理承载体，给 app 提供完善的日历功能。
 
 <img src="imgs/general-page/app-calendar.jpg" alt="日历" style="zoom:25%;" />
 
@@ -110,7 +114,9 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 
 
+##### 门户
 
+<img src="imgs/general-page/app-portal.jpg" alt="门户" style="zoom:25%;" />
 
 
 
