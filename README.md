@@ -74,6 +74,18 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 | 4    | 视图搜索区     | 快捷搜索               |                                                              | 应用视图内部模型 |
 | 5    | 视图数据内容区 | 实体移动端多项数据控件 | [ IPSDEMobMDCtrl](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/list/IPSDEMobMDCtrl) |                  |
 
+> 注：以下章节，不再介绍序号为 1 的应用级导航栏。
+
+
+
+##### 日历
+
+<img src="imgs/general-page/app-calendar.jpg" alt="日历" style="zoom:25%;" />
+
+
+
+
+
 
 
 
