@@ -63,7 +63,7 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 如上图所示，将消息界面分为由边框组成的几个主要部分，详情如下：
 
 1. 应用级导航栏：该导航栏属于应用级导航，固定在应用底端，对应用提供的功能做最大类别的区分。在应用中，数据基本不会变化。
-2. 消息视图：导航内容，该内容显示在界面中，但内容独立维护，可以在其他场景独立显示（以下简称视图）。
+2. 消息视图：导航内容，该内容显示在界面中，但内容独立维护，可以在其他场景独立显示（以下简称视图）。主题提供 app 消息数据的呈现于管理。
 3. 视图操作区：该区域属于消息视图，用户定义消息视图的操作节点，不包括数据操作。
 4. 视图搜索区：该区域属于消息视图，搜索消息数据。
 5. 视图数据内容区：该区域属于消息视图，消息数据展示。
@@ -73,7 +73,7 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 | 序号 | 名称           | 模型名称               | 详情                                                         | 备注             |
 | ---- | -------------- | ---------------------- | ------------------------------------------------------------ | ---------------- |
 | 1    | 应用级导航栏   | 应用菜单               | [ IPSAppMenu](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/menu/IPSAppMenu) |                  |
-| 2    | 消息视图       | 应用视图               | [ IPSAppView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppView) |                  |
+| 2    | 消息视图       | 应用移动端多项数据视图 | [IPSAppDEMobMDView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppDEMobMDView) |                  |
 | 3    | 视图操作区     | 实体工具栏控件         | [ IPSDEToolbar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/toolbar/IPSDEToolbar) |                  |
 | 4    | 视图搜索区     | 快捷搜索               |                                                              | 应用视图内部模型 |
 | 5    | 视图数据内容区 | 实体移动端多项数据控件 | [ IPSDEMobMDCtrl](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/list/IPSDEMobMDCtrl) |                  |
@@ -85,6 +85,28 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 ##### 日历
 
 <img src="imgs/general-page/app-calendar.jpg" alt="日历" style="zoom:25%;" />
+
+如上图所示，红色区域内，日历界面视图的主要组成有以下几个部分：
+
+1. 日历视图：主要提供日历及日历相关功能，给用户做日程安排、事件管理等。
+2. 视图日历数据：显示日历数据信息，属于日程的显示内容。
+3. 视图分页：日历视图的不同内容展示，不同的分页提供不同的内容，包括日程、DING 和任务。
+4. 视图消息区：日历视图消息提示栏与界面管理。
+5. 日程详情：时间轴显示当前选中日期数据内容，由日历数据提供主键，该区域内容属于独立维护，是视图级内容。
+6. 视图操作区：给日程详情数据信息，内部包括一系列操作逻辑。
+
+日历视图模型化详情如下：
+
+| 序号 | 名称         | 模型名称       | 详情                                                         | 备注                                                         |
+| ---- | ------------ | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | 日历视图     | 移动端日历视图 | [ IPSAppDEMobCalendarView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppDEMobCalendarView) |                                                              |
+| 2    | 视图日历数据 | 日历部件       | [ IPSCalendar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/calendar/IPSCalendar) |                                                              |
+| 3    | 视图分页     | 关系分页部件   | [ IPSDRTab](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/drctrl/IPSDRTab) | 该模型未集成至日历视图                                       |
+| 4    | 视图消息区   |                |                                                              | 该模型不存在                                                 |
+| 5    | 日程详情     |                |                                                              | 该模型不存在，建议集成                                       |
+| 6    | 视图操作区   |                | 实体工具栏控件                                               | [ IPSDEToolbar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/toolbar/IPSDEToolbar) |
+
+就日历视图模型而言，区域 2 和区域 6，已经是预置支持了，区域 3 、区域 4 和 区域 5 ，区域 5 可以适当补充模型结构，为日历视图提供更多的信息。
 
 
 
