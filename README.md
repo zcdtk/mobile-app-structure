@@ -146,11 +146,27 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 ##### 表单
 
-在 app 中，有一类视图，是必不可少的，那就表单视图。
-
-app 数据信息录入，就需要表单视图来提高基础数据的处理，
+在 app 中，有一类视图，是必不可少的，那就表单视图。app 数据信息录入，就需要表单视图来提供基础数据的处理。
 
 <img src="imgs/general-page/app-edit.jpg" alt="app-edit" style="zoom:25%;" />
+
+如上图所示，红色区域内，表单界面视图主要由以下一个部分组成：
+
+1. 表单视图：主要提供数据信息录入处理。
+2. 视图标题：显示视图名称。
+3. 视图表单：数据信息处理内容，提供常规的数据输入，基本模式有文本框、选择和文件处理等。
+4. 视图操作区：对视图表单数据与后端做交互处理。
+5. 视图操作区：对视图提供附加处理逻辑。
+
+编辑视图模型化详情如下：
+
+| 序号 | 名称       | 模型名称               | 详情                                                         | 备注                     |
+| ---- | ---------- | ---------------------- | ------------------------------------------------------------ | ------------------------ |
+| 1    | 编辑视图   | 应用实体移动端编辑视图 | [ IPSAppDEMobEditView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppDEMobEditView) |                          |
+| 2    | 视图标题   |                        |                                                              | 视图内部模型             |
+| 3    | 视图表单   | 实体编辑表单           | [ IPSDEEditForm](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/form/IPSDEEditForm) |                          |
+| 4    | 视图操作区 | 实体工具栏控件         | [ IPSDEToolbar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/toolbar/IPSDEToolbar) |                          |
+| 5    | 视图操作区 |                        |                                                              | 附加操作逻辑，模型不存在 |
 
 
 
