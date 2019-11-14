@@ -101,14 +101,14 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 日历视图模型化详情如下：
 
-| 序号 | 名称         | 模型名称       | 详情                                                         | 备注                                                         |
-| ---- | ------------ | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | 日历视图     | 移动端日历视图 | [ IPSAppDEMobCalendarView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppDEMobCalendarView) |                                                              |
-| 2    | 视图日历数据 | 日历部件       | [ IPSCalendar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/calendar/IPSCalendar) |                                                              |
-| 3    | 视图分页     | 关系分页部件   | [ IPSDRTab](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/drctrl/IPSDRTab) | 该模型未集成至日历视图                                       |
-| 4    | 视图消息区   |                |                                                              | 该模型不存在                                                 |
-| 5    | 日程详情     |                |                                                              | 该模型不存在，建议集成                                       |
-| 6    | 视图操作区   |                | 实体工具栏控件                                               | [ IPSDEToolbar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/toolbar/IPSDEToolbar) |
+| 序号 | 名称         | 模型名称       | 详情                                                         | 备注                   |
+| ---- | ------------ | -------------- | ------------------------------------------------------------ | ---------------------- |
+| 1    | 日历视图     | 移动端日历视图 | [ IPSAppDEMobCalendarView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppDEMobCalendarView) |                        |
+| 2    | 视图日历数据 | 日历部件       | [ IPSCalendar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/calendar/IPSCalendar) |                        |
+| 3    | 视图分页     | 关系分页部件   | [ IPSDRTab](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/drctrl/IPSDRTab) | 该模型未集成至日历视图 |
+| 4    | 视图消息区   |                |                                                              | 该模型不存在           |
+| 5    | 日程详情     |                |                                                              | 该模型不存在，建议集成 |
+| 6    | 视图操作区   | 实体工具栏控件 | [ IPSDEToolbar](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/toolbar/IPSDEToolbar) |                        |
 
 就日历视图模型而言，区域 2 和区域 6，已经是预置支持了，区域 3 、区域 4 和 区域 5 ，区域 5 可以适当补充模型结构，为日历视图提供更多的信息。
 
@@ -116,7 +116,43 @@ app 登录方式与用户的注册方式，切实相关。如上图所示，用�
 
 ##### 门户
 
+门户视图，是 app 中信息展示最多的之一，它是 app  数据信息的集中地点，通过不同的方式，将信息组合显示在同一个界面中，是信息的聚合点，对门户视图的布局级数据展示，都有不一样标准。
+
 <img src="imgs/general-page/app-portal.jpg" alt="门户" style="zoom:25%;" />
+
+如上图所示，红色区域内，门户界面视图主要由以下一个部分组成：
+
+1. 门户视图：主要提供多种信息的集中展示。
+2. 视图标题：显示视图名称和部分操作区域。
+3. 视图消息：视图静态信息区域，一般多为广告等。
+4. 视图通知消息：视图动态信息区域，实时动态数据内容显示。
+5. 数据统计：视图动态信息区域，实时动态数据内容显示。
+6. 快捷入口：其他操作界面入口。
+
+门户视图模型化详情如下：
+
+| 序号 | 名称         | 模型名称             | 详情                                                         | 备注                             |
+| ---- | ------------ | -------------------- | ------------------------------------------------------------ | -------------------------------- |
+| 1    | 门户视图     | 应用门户视图         | [ IPSAppPortalView](https://modelapi.ibizlab.cn/#/net/ibizsys/model/app/view/IPSAppPortalView) |                                  |
+| 2    | 视图标题     |                      |                                                              | 视图内部模型，操作区域模型不存在 |
+| 3    | 视图消息     | 系统自定义门户门户   | [IPSSysCustomPortlet](https://modelapi.ibizlab.cn/#/net/ibizsys/model/res/IPSSysCustomPortlet) |                                  |
+| 4    | 视图通知消息 | 系统实体列表门户部件 | [ IPSSysDEListPortlet](https://modelapi.ibizlab.cn/#/net/ibizsys/model/res/IPSSysDEListPortlet) |                                  |
+| 5    | 数据统计     | 系统实体列表门户部件 | [ IPSSysDEListPortlet](https://modelapi.ibizlab.cn/#/net/ibizsys/model/res/IPSSysDEListPortlet) |                                  |
+| 6    | 快捷入口     | 快速菜单部件         | [IPSDBMenuPortletPart](https://modelapi.ibizlab.cn/#/net/ibizsys/model/control/dashboard/IPSDBMenuPortletPart) |                                  |
+
+门户视图在常规的使用中，对系统实体列表门户部件和系统自定义门户门户使用最多，该两个模型在显示数据的处理上，具有的优势比较大，能够通过不同界面模式，将很多数据都集合在一起。
+
+
+
+##### 表单
+
+在 app 中，有一类视图，是必不可少的，那就表单视图。
+
+app 数据信息录入，就需要表单视图来提高基础数据的处理，
+
+<img src="imgs/general-page/app-edit.jpg" alt="app-edit" style="zoom:25%;" />
+
+
 
 
 
